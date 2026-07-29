@@ -14,7 +14,7 @@ const services = [
     title: "Residential & Deep Cleaning",
     description:
       "Complete home cleaning solutions that refresh and restore your living spaces.",
-    image: "/images/Services/Residential cleaning 2.jfif",
+    image: "/images/Services/Residential cleaning 2.jpg",
     icon: Home,
   },
   {
