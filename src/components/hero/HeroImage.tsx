@@ -32,7 +32,7 @@ export default function HeroImage() {
         "
       >
         <Image
-          src="/images/hero/28a34acc37b584d20cb67131b092427f.jpg"
+          src="/images/Hero/28a34acc37b584d20cb67131b092427f.jpg"
           alt="Professional cleaning service"
           fill
           priority

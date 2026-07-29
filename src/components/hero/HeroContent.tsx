@@ -47,13 +47,13 @@ export default function HeroContent() {
       animate="show"
       className="relative z-10"
     >
-      {/* Badge */}
+      {/* Badge
       <motion.div variants={itemVariants}>
         <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-xs font-medium text-primary sm:text-sm">
           <Sparkles size={16} />
           Professional Cleaning Solutions
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Heading */}
       <motion.h1
@@ -101,6 +101,7 @@ export default function HeroContent() {
             hover:-translate-y-1
             hover:bg-secondary
             hover:text-[#07092E]
+            
         "
         >
         <CalendarDays

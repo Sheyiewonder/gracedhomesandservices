@@ -54,7 +54,8 @@ export default function FloatingCard({
           items-center
           justify-center
           rounded-xl
-          bg-primary
+          bg-primary/10
+          dark:border-accent/20
           text-white
           shadow-md
         "

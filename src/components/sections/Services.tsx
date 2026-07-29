@@ -14,42 +14,42 @@ const services = [
     title: "Residential & Deep Cleaning",
     description:
       "Complete home cleaning solutions that refresh and restore your living spaces.",
-    image: "/images/services/Residential cleaning 2.jfif",
+    image: "/images/Services/Residential cleaning 2.jfif",
     icon: Home,
   },
   {
     title: "Upholstery & Carpet Care",
     description:
       "Professional cleaning for carpets, sofas, and fabrics to remove dirt and stains.",
-    image: "/images/services/Sofa Cleaning Service in Bangalore _ TechSquadTeam.jfif",
+    image: "/images/Services/Sofa Cleaning Service in Bangalore _ TechSquadTeam.jfif",
     icon: Sofa,
   },
   {
     title: "Post-Construction Cleaning",
     description:
       "We transform newly built spaces into clean, comfortable environments.",
-    image: "/images/services/post construction.jfif",
+    image: "/images/Services/post construction.jfif",
     icon: Hammer,
   },
   {
     title: "Events Before & After Cleaning",
     description:
       "Keep your event spaces spotless before guests arrive and after they leave.",
-    image: "/images/services/Event Hall.jfif",
+    image: "/images/Services/Event Hall.jfif",
     icon: PartyPopper,
   },
   {
     title: "Fumigation & Pest Control",
     description:
       "Effective pest management solutions for homes and businesses.",
-    image: "/images/services/Fumigation and pest control.jfif",
+    image: "/images/Services/Fumigation and pest control.jfif",
     icon: Bug,
   },
   {
     title: "Commercial & Industrial Maintenance",
     description:
       "Reliable cleaning services for offices, facilities, and workplaces.",
-    image: "/images/services/Industrial.jfif",
+    image: "/images/Services/Industrial.jfif",
     icon: Building2,
   },
 ];
@@ -66,8 +66,8 @@ export default function Services() {
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
 
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-sm text-primary">
-            <Sparkles size={16} />
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-sm text-primary bg-muted">
+            <Sparkles size={14} />
             Our Services
           </div>
 

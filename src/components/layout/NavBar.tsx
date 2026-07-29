@@ -142,6 +142,7 @@ export default function Navbar() {
                 after:h-[2px]
                 after:w-0
                 after:bg-primary
+                dark:after:bg-accent
                 after:transition-all
                 hover:after:w-full
                 `}

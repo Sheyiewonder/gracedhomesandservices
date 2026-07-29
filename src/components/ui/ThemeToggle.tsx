@@ -58,7 +58,7 @@ export default function ThemeToggle() {
 
         dark:border-white/10
         dark:bg-slate-900/80
-        dark:text-yellow-300
+        dark:text-accent
 
         max-lg:top-auto
         max-lg:right-4

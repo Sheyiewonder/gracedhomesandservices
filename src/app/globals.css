@@ -13,6 +13,8 @@
 
   --radius: 1.25rem;
   --border: #dceeff;
+
+  -accent-ui: var(--primary);
 }
 
 .dark {
@@ -23,6 +25,8 @@
   --muted: #151a45;
 
   --border: #1d2458;
+
+  --accent-ui: var(--accent);
 }
 
 @theme {
@@ -39,6 +43,8 @@
   --color-border: var(--border);
 
   --radius-xl: var(--radius);
+
+  --color-ui-accent: var(--accent-ui);
 }
 
 html {

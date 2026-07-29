@@ -27,6 +27,8 @@ export default function Button({
           transition-all
           hover:bg-primary
           hover:text-white
+          dark:hover:bg-accent
+          dark:hover:text-[#07092E]
         "
       >
         {children}
