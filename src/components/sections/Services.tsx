@@ -21,35 +21,35 @@ const services = [
     title: "Upholstery & Carpet Care",
     description:
       "Professional cleaning for carpets, sofas, and fabrics to remove dirt and stains.",
-    image: "/images/Services/Sofa Cleaning Service in Bangalore _ TechSquadTeam.jfif",
+    image: "/images/Services/Sofa Cleaning Service in Bangalore _ TechSquadTeam.jpg",
     icon: Sofa,
   },
   {
     title: "Post-Construction Cleaning",
     description:
       "We transform newly built spaces into clean, comfortable environments.",
-    image: "/images/Services/post construction.jfif",
+    image: "/images/Services/post construction.jpg",
     icon: Hammer,
   },
   {
     title: "Events Before & After Cleaning",
     description:
       "Keep your event spaces spotless before guests arrive and after they leave.",
-    image: "/images/Services/Event Hall.jfif",
+    image: "/images/Services/Event Hall.jpg",
     icon: PartyPopper,
   },
   {
     title: "Fumigation & Pest Control",
     description:
       "Effective pest management solutions for homes and businesses.",
-    image: "/images/Services/Fumigation and pest control.jfif",
+    image: "/images/Services/Fumigation and pest control.jpg",
     icon: Bug,
   },
   {
     title: "Commercial & Industrial Maintenance",
     description:
       "Reliable cleaning services for offices, facilities, and workplaces.",
-    image: "/images/Services/Industrial.jfif",
+    image: "/images/Services/Industrial.jpg",
     icon: Building2,
   },
 ];
