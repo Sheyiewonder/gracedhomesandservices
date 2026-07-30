@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Sparkles,
   Home,
@@ -7,6 +10,7 @@ import {
   PartyPopper,
   Bug,
   Building2,
+  ArrowRight,
 } from "lucide-react";
 
 const services = [
@@ -58,9 +62,29 @@ const services = [
 export default function Services() {
   return (
     <section
-      id="services"
-      className="py-20"
+        id="services"
+        className="
+            relative
+            overflow-hidden
+            py-24
+        "
     >
+
+        {/* Background blobs */}
+
+        <div className="absolute -left-40 top-10 h-96 w-96 rounded-full bg-secondary/10 blur-[120px]" />
+
+        <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-primary/10 blur-[140px] dark:bg-accent/10" />
+
+        <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+            backgroundImage:
+            "radial-gradient(circle at 1px 1px,currentColor 1px,transparent 0)",
+            backgroundSize: "28px 28px",
+        }}
+        />
+
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Heading */}
@@ -99,23 +123,52 @@ export default function Services() {
           "
         >
 
-          {services.map((service) => {
+          {services.map((service, index) => {
             const Icon = service.icon;
 
             return (
-              <article
+              <motion.article
                 key={service.title}
                 className="
-                group
-                overflow-hidden
-                rounded-3xl
-                bg-card
-                shadow-lg
-                border
-                border-black/5
-                dark:border-white/10
+                    group
+                    relative
+                    overflow-hidden
+                    rounded-[28px]
+
+                    border
+                    border-primary/10
+
+                    bg-card/80
+                    backdrop-blur-xl
+
+                    shadow-lg
+                    transition-all
+                    duration-500
+
+                    
+                    hover:shadow-[0_30px_70px_rgba(0,0,0,0.12)]
+
+                    dark:hover:shadow-[0_30px_70px_rgba(0,0,0,0.45)]
                 "
-              >
+                initial={{
+                opacity:0,
+                y:40
+                }}
+
+                whileInView={{
+                opacity:1,
+                y:0
+                }}
+
+                viewport={{
+                once:true
+                }}
+
+                transition={{
+                duration:0.6,
+                delay:index*0.08
+                }}
+             >
 
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -136,6 +189,26 @@ export default function Services() {
                     "
                   />
 
+                  <div
+                    className="
+                    absolute
+                    inset-0
+
+                    bg-gradient-to-t
+
+                    from-black/45
+                    via-black/5
+                    to-transparent
+
+                    opacity-70
+
+                    group-hover:opacity-30
+
+                    transition
+                    duration-500
+                    "
+                />
+
                 </div>
 
 
@@ -153,6 +226,12 @@ export default function Services() {
                     rounded-xl
                     bg-primary
                     text-white
+
+                    shadow-lg
+
+                    group-hover:rotate-5
+                    transition-all
+                    duration-500
                     "
                   >
                     <Icon size={22}/>
@@ -169,21 +248,39 @@ export default function Services() {
                   </p>
 
 
-                  <button
-                    className="
-                    mt-5
-                    text-sm
-                    font-semibold
-                    text-primary
-                    hover:text-secondary
-                    "
-                  >
-                    Learn More →
-                  </button>
+                  
+                    <Link
+                        href="#contact"
+                        className="
+                            mt-6
+                            inline-flex
+                            w-fit
+                            items-center
+                            gap-2
+                            text-sm
+                            font-semibold
+                            text-primary
+                            transition-colors
+                            duration-300
+                            hover:text-secondary
+                        "
+                        >
+                        <span>Learn More</span>
+
+                        <ArrowRight
+                            size={18}
+                            className="
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1.5
+                            "
+                        />
+                        </Link>
+                  
 
                 </div>
 
-              </article>
+              </motion.article>
             );
           })}
 
