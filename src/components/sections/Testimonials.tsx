@@ -132,14 +132,7 @@ export default function Testimonials() {
             variants={item}
             className="mt-16"
           >
-            <TestimonialsCarousel>
-              {testimonials.map((testimonial) => (
-                <TestimonialCard
-                  key={testimonial.name}
-                  {...testimonial}
-                />
-              ))}
-            </TestimonialsCarousel>
+            <TestimonialsCarousel />
           </motion.div>
 
         </motion.div>
