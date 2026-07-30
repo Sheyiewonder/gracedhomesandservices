@@ -7,6 +7,7 @@ import Process from "@/components/Process";
 import Testimonials from "@/components/sections/Testimonials";
 import Footer from "@/components/layout/Footer";
 
+
 export default function HomePage() {
   return (
     <>

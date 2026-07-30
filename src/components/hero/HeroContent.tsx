@@ -7,6 +7,7 @@ import {
   CalendarDays,
   ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 import HeroStats from "./HeroStats";
 
 const trustPoints = [
@@ -47,13 +48,6 @@ export default function HeroContent() {
       animate="show"
       className="relative z-10"
     >
-      {/* Badge
-      <motion.div variants={itemVariants}>
-        <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-xs font-medium text-primary sm:text-sm">
-          <Sparkles size={16} />
-          Professional Cleaning Solutions
-        </div>
-      </motion.div> */}
 
       {/* Heading */}
       <motion.h1
@@ -81,7 +75,9 @@ export default function HeroContent() {
         variants={itemVariants}
         className="mt-8 flex flex-col gap-4 sm:flex-row"
       >
-        <button
+       
+        <Link
+        href="#contact"
         className="
             group
             inline-flex
@@ -101,7 +97,10 @@ export default function HeroContent() {
             hover:-translate-y-1
             hover:bg-secondary
             hover:text-[#07092E]
-            
+            active:scale-95
+            active:bg-primary
+            active:text-white
+
         "
         >
         <CalendarDays
@@ -112,9 +111,10 @@ export default function HeroContent() {
         <span className="flex items-center">
             Book Cleaning
         </span>
-        </button>
+        </Link>
 
-        <button
+        <Link
+            href="#services"
             className="
                 group
                 inline-flex
@@ -134,6 +134,10 @@ export default function HeroContent() {
                 duration-300
                 hover:bg-primary
                 hover:text-white
+                active:scale-95
+                active:bg-primary
+                active:text-white
+
             "
             >
             <span className="flex items-center">
@@ -149,7 +153,7 @@ export default function HeroContent() {
                 group-hover:translate-x-1
                 "
             />
-        </button>
+        </Link>
       </motion.div>
 
       {/* Trust Points */}

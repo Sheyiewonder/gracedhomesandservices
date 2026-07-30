@@ -16,68 +16,74 @@ export default function ThemeToggle() {
   const isDark = resolvedTheme === "dark";
 
   return (
-    <motion.button
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.3,
-        delay: 0.8,
-      }}
-      onClick={() => setTheme(isDark ? "light" : "dark")}
-      aria-label="Toggle theme"
-      className="
-        fixed
-        right-6
-        top-1/2
-        -z-translate-y-1/2
+        <div
+            className="
+            fixed
+            right-6
+            top-1/2
+            -translate-y-1/2
+            z-40
+            pointer-events-none
 
-        z-[60]
+            max-lg:right-4
+            max-lg:bottom-4
+            max-lg:top-auto
+            max-lg:translate-y-0
+            "
+        >
+            <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.3,
+                delay: 0.8,
+            }}
+            onClick={() => setTheme(isDark ? "light" : "dark")}
+            aria-label="Toggle theme"
+            className="
+                pointer-events-auto
 
-        flex
-        h-8
-        w-8
-        items-center
-        justify-center
+                flex
+                h-8
+                w-8
+                items-center
+                justify-center
 
-        rounded-full
+                rounded-full
 
-        border
-        border-primary/10
+                border
+                border-primary/10
 
-        bg-white/80
-        text-primary
+                bg-white/80
+                text-primary
 
-        shadow-md
-        backdrop-blur-xl
+                shadow-md
+                backdrop-blur-xl
 
-        transition-all
-        duration-300
+                transition-all
+                duration-300
 
-        hover:scale-110
-        hover:shadow-xl
+                hover:scale-110
+                hover:shadow-xl
 
-        dark:border-white/10
-        dark:bg-slate-900/80
-        dark:text-accent
-
-        max-lg:top-auto
-        max-lg:right-4
-        max-lg:bottom-4
-        max-lg:translate-y-0
-      "
-    >
-      <motion.div
-        key={resolvedTheme}
-        initial={{ rotate: -90, opacity: 0 }}
-        animate={{ rotate: 0, opacity: 1 }}
-        transition={{ duration: 0.2 }}
-      >
-        {isDark ? (
-          <MoonStar size={14} strokeWidth={2.4} />
-        ) : (
-          <SunMedium size={14} strokeWidth={2.4} />
-        )}
-      </motion.div>
-    </motion.button>
-  );
+                dark:border-white/10
+                dark:bg-slate-900/80
+                dark:text-accent
+            "
+            >
+            <motion.div
+                key={resolvedTheme}
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+            >
+                {isDark ? (
+                <MoonStar size={14} strokeWidth={2.4} />
+                ) : (
+                <SunMedium size={14} strokeWidth={2.4} />
+                )}
+            </motion.div>
+            </motion.button>
+        </div>
+    );
 }
