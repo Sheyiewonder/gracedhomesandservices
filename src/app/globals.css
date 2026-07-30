@@ -82,6 +82,19 @@ img {
   object-fit: cover;
 }
 
+/* ==============================
+   TESTIMONIAL CAROUSEL
+============================== */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 ::selection {
   background: #f7e41c;
   color: #07092e;
