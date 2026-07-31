@@ -36,7 +36,7 @@ export const testimonials = [
   {
     name: "Michael James",
     role: "Restaurant Owner",
-    image: "/images/testimonials/michael (1).jpg",
+    image: "/images/Testimonials/michael (1).jpg",
     rating: 5,
     review:
       "The team exceeded our expectations. Fast, efficient and incredibly detailed.",
