@@ -7,6 +7,7 @@ import {
   ClipboardCheck,
   BrushCleaning,
   PartyPopper,
+  Link,
 } from "lucide-react";
 
 const steps = [
@@ -221,8 +222,8 @@ export default function Process() {
             focus on what matters most.
           </p>
 
-          <a
-            href="#contact"
+          <Link
+            href="https://wa.me/c/2349069932400?text=Hello%20Graced%20Homes%20%26%20Services.%20I'd%20like%20to%20book%20a%20cleaning%20service."
             className="
               mt-8
               inline-flex
@@ -241,7 +242,7 @@ export default function Process() {
             "
           >
             Book Your Cleaning
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

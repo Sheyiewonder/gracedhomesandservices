@@ -15,7 +15,7 @@ export default function Footer() {
         border-t
         border-border
         bg-card
-        py-20
+        py-12
       "
     >
       {/* Background Glow */}
