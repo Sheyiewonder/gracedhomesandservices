@@ -4,7 +4,7 @@ export const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Business Owner",
-    image: "/images/testimonials/sarah (1).jpg",
+    image: "/images/Testimonials/sarah (1).jpg",
     rating: 5,
     review:
       "GRACED HOMES & SERVICES transformed our office beyond expectations. Professional, punctual and incredibly thorough. We'll definitely be using them again.",
@@ -12,7 +12,7 @@ export const testimonials = [
   {
     name: "David Williams",
     role: "Homeowner",
-    image: "/images/testimonials/david (1).jpg",
+    image: "/images/Testimonials/david (1).jpg",
     rating: 5,
     review:
       "The deep cleaning service was outstanding. Every room looked brand new and the attention to detail was exceptional.",
@@ -20,7 +20,7 @@ export const testimonials = [
   {
     name: "Esther Adams",
     role: "Facility Manager",
-    image: "/images/testimonials/esther (1).jpg",
+    image: "/images/Testimonials/esther (1).jpg",
     rating: 5,
     review:
       "Reliable, friendly and extremely professional. Communication was excellent from booking to completion.",
@@ -28,7 +28,7 @@ export const testimonials = [
   {
     name: "Grace Brown",
     role: "Event Planner",
-    image: "/images/testimonials/grace (1).jpg",
+    image: "/images/Testimonials/grace (1).jpg",
     rating: 5,
     review:
       "Our venue looked absolutely immaculate before and after the event. Highly recommended.",
@@ -44,7 +44,7 @@ export const testimonials = [
   {
     name: "Daniel Wilson",
     role: "Office Manager",
-    image: "/images/testimonials/daniel (1).jpg",
+    image: "/images/Testimonials/daniel (1).jpg",
     rating: 5,
     review:
       "Very dependable service. They consistently deliver outstanding cleaning every single visit.",
