@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins, Manrope } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "../components/providers/ThemeProvider";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
         >
             <ThemeProvider>
                 {children}
+                <ThemeToggle />
             </ThemeProvider>
         </body>
     </html>

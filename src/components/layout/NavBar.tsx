@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import ThemeToggle from "../ui/ThemeToggle";
 
 const navLinks = [
   { name: "Home", href: "#" },
@@ -126,7 +125,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`
                 relative
-                text-sm
+                text-xs
                 font-semibold
                 transition-colors
                 duration-300
@@ -150,12 +149,15 @@ export default function Navbar() {
           {/* CTA */}
 
           <div className="hidden items-center gap-4 lg:flex">
-            <ThemeToggle />
-            <button
-              className="
+            <Link
+                href="#contact"
+                className="
+                inline-flex
+                items-center
+                justify-center
                 rounded-full
                 bg-primary
-                px-6
+                px-4
                 py-3
                 text-sm
                 font-semibold
@@ -169,7 +171,7 @@ export default function Navbar() {
               "
             >
               Get Free Quote
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -290,22 +292,31 @@ export default function Navbar() {
                     </motion.a>
                 ))}
 
-                <div className="flex justify-center py-2">
-                    <ThemeToggle />
-                </div>
-
-                <button
+                <Link
+                    href="#contact"
                   className="
-                    mt-2
+                    group
+                    inline-flex
+                    items-center
+                    justify-center
+                    mt-0
                     rounded-full
                     bg-primary
                     py-4
                     font-semibold
                     text-white
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:bg-secondary
+                    hover:text-[#07092E]
+                    active:scale-95
+                    active:bg-primary
+                    active:text-white
                   "
                 >
                   Get Free Quote
-                </button>
+                </Link>
 
               </div>
             </motion.div>

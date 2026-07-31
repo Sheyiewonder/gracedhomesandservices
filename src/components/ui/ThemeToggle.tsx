@@ -16,21 +16,49 @@ export default function ThemeToggle() {
   const isDark = resolvedTheme === "dark";
 
   return (
-        <div
+        <motion.div
+            whileHover={{
+                scale: 1.08,
+                rotate: 8,
+            }}
+            whileTap={{
+                scale: 0.95,
+            }}
+            initial={{
+                opacity: 0,
+                scale: 0.9,
+            }}
+            animate={{
+                opacity: 1,
+                scale: 1,
+                y: [0, -6, 0],
+                boxShadow: [
+                "0 10px 20px rgba(0,0,0,.10)",
+                "0 18px 35px rgba(0,0,0,.18)",
+                "0 10px 20px rgba(0,0,0,.10)",
+                ],
+            }}
+            transition={{
+                opacity: {
+                duration: 0.4,
+                },
+                scale: {
+                duration: 0.4,
+                },
+                y: {
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+                },
+            }}
             className="
-            fixed
-            right-6
-            top-1/2
-            -translate-y-1/2
-            z-40
-            pointer-events-none
-
-            max-lg:right-4
-            max-lg:bottom-4
-            max-lg:top-auto
-            max-lg:translate-y-0
+                fixed
+                bottom-16
+                right-6
+                z-[100]
             "
-        >
+            >
             <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -84,6 +112,6 @@ export default function ThemeToggle() {
                 )}
             </motion.div>
             </motion.button>
-        </div>
+        </motion.div>
     );
 }
