@@ -17,6 +17,7 @@ const features = [
       "Our trained cleaning specialists deliver meticulous results with attention to every detail.",
     icon: ShieldCheck,
   },
+  
   {
     title: "Reliable & On-Time",
     description:
@@ -185,52 +186,89 @@ export default function WhyChooseUs() {
                     hover:shadow-2xl
                   "
                 >
-                  <div className="flex items-start gap-5">
+                  <div className="space-y-5">
 
-                    <div
+                    <div className="flex items-center gap-4">
+
+                        {/* Icon */}
+
+                        <div
                         className="
                             flex
-                            h-16
-                            w-16
+                            h-10
+                            w-10
                             shrink-0
                             items-center
                             justify-center
-                            rounded-2xl
+                            rounded-xl
+
                             bg-primary
                             text-white
                             shadow-lg
+
                             transition-all
                             duration-300
+
                             group-hover:scale-110
                             group-hover:rotate-2
                             group-hover:bg-secondary
+
                             dark:group-hover:bg-accent
                             dark:group-hover:text-[#07092E]
+
+                            sm:h-12
+                            sm:w-12
+
+                            lg:h-16
+                            lg:w-16
+                            lg:rounded-2xl
                         "
                         >
-                        <Icon size={34} strokeWidth={2.2} />
-                    </div>
+                        <Icon
+                            className="
+                            h-5
+                            w-5
 
-                    <div>
+                            sm:h-6
+                            sm:w-6
 
-                      <h3
+                            lg:h-8
+                            lg:w-8
+                            "
+                            size={34}
+                            strokeWidth={2.2}
+                        />
+                        </div>
+
+                        {/* Title */}
+
+                        <h3
                         className="
-                          text-xl
-                          font-semibold
-                          transition-colors
-                          group-hover:text-primary
-                        "
-                      >
-                        {feature.title}
-                      </h3>
+                            text-lg
+                            font-semibold
+                            transition-colors
+                            group-hover:text-primary
 
-                      <p className="mt-3 leading-7 text-foreground/70">
-                        {feature.description}
-                      </p>
+                            lg:text-xl
+                        "
+                        >
+                        {feature.title}
+                        </h3>
 
                     </div>
 
-                  </div>
+                    {/* Description */}
+
+                    <p
+                        className="
+                        leading-7
+                        text-foreground/70
+                        "
+                    >
+                        {feature.description}
+                    </p>
+
+                    </div>
                 </motion.div>
               );
             })}
@@ -245,7 +283,15 @@ export default function WhyChooseUs() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="
+            mt-20
+            grid
+            grid-cols-2
+            gap-4
+
+            sm:grid-cols-2
+            lg:grid-cols-4
+          "
         >
           {stats.map((stat) => (
             <motion.div
@@ -256,9 +302,11 @@ export default function WhyChooseUs() {
                 border
                 border-border
                 bg-card/80
-                p-8
+                p-5
                 text-center
                 backdrop-blur-xl
+
+                lg:p-8
               "
             >
               <h3 className="text-4xl font-bold text-primary">

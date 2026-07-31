@@ -138,8 +138,16 @@ export default function Process() {
 
           <div className="absolute left-0 right-0 top-10 hidden h-1 bg-border lg:block" />
 
-          <div className="grid gap-10 lg:grid-cols-4">
+          <div
+            className="
+              grid
+              grid-cols-2
+              gap-5
 
+              lg:grid-cols-4
+              lg:gap-10
+            "
+          >
             {steps.map((step) => {
               const Icon = step.icon;
 
@@ -159,90 +167,96 @@ export default function Process() {
                       relative
                       z-10
                       mx-auto
+
                       flex
-                      h-20
-                      w-20
+                      h-14
+                      w-14
                       items-center
                       justify-center
+
                       rounded-full
                       bg-primary
                       text-white
                       shadow-xl
+
                       transition-all
                       duration-300
+
                       group-hover:bg-secondary
+
+                      lg:h-20
+                      lg:w-20
+
                       dark:group-hover:bg-accent
                       dark:group-hover:text-[#07092E]
                     "
                   >
                     <Icon
-                      size={36}
+                      className="
+                        h-6
+                        w-6
+
+                        lg:h-9
+                        lg:w-9
+                      "
                       strokeWidth={2.2}
                     />
                   </div>
 
                   {/* Number */}
 
-                  <div className="mt-5 text-sm font-bold tracking-[0.25em] text-primary">
+                  <div
+                    className="
+                      mt-3
+                      text-xs
+                      font-bold
+                      tracking-[0.2em]
+                      text-primary
+
+                      lg:mt-5
+                      lg:text-sm
+                      lg:tracking-[0.25em]
+                    "
+                  >
                     {step.number}
                   </div>
 
                   {/* Title */}
 
-                  <h3 className="mt-3 text-xl font-semibold">
+                  <h3
+                    className="
+                      mt-2
+                      text-base
+                      font-semibold
+                      leading-snug
+
+                      lg:mt-3
+                      lg:text-xl
+                    "
+                  >
                     {step.title}
                   </h3>
 
                   {/* Description */}
+                  <p
+                    className="
+                      mt-2
+                      text-sm
+                      leading-6
+                      text-foreground/70
+                      mb-4
 
-                  <p className="mt-4 leading-7 text-foreground/70">
+                      lg:mt-4
+                      lg:text-base
+                      lg:leading-7
+                    "
+                  >
                     {step.description}
                   </p>
                 </motion.div>
               );
             })}
           </div>
-        </motion.div>
-
-        {/* CTA */}
-
-        <motion.div
-          variants={item}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="mt-20 text-center"
-        >
-          <h3 className="text-3xl font-bold">
-            Ready for a Spotless Space?
-          </h3>
-
-          <p className="mt-4 text-foreground/70">
-            Let GRACED HOMES & SERVICES handle the cleaning while you
-            focus on what matters most.
-          </p>
-
-          <Link
-            href="https://wa.me/c/2349069932400?text=Hello%20Graced%20Homes%20%26%20Services.%20I'd%20like%20to%20book%20a%20cleaning%20service."
-            className="
-              mt-8
-              inline-flex
-              items-center
-              rounded-full
-              bg-primary
-              px-8
-              py-4
-              font-semibold
-              text-white
-              transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:bg-secondary
-              hover:text-[#07092E]
-            "
-          >
-            Book Your Cleaning
-          </Link>
         </motion.div>
       </div>
     </section>

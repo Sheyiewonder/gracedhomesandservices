@@ -36,7 +36,7 @@ export default function TestimonialCard({
       className="
         group
         relative
-        h-ful
+        h-full
         w-full
         snap-start
         shrink-0

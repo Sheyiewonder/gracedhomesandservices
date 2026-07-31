@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { Sparkles, Star, Quote } from "lucide-react";
 
 import TestimonialsCarousel from "../testimonials/TestimonialsCarousel";
-import TestimonialCard from "../testimonials/TestimonialCard";
-import { testimonials } from "@/data/testimonials";
 
 const container = {
   hidden: {},
@@ -35,7 +33,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden py-24"
+      className="relative overflow-hidden py-10"
     >
       {/* Background */}
 

@@ -27,7 +27,7 @@ const socials = [
   },
   {
     name: "WhatsApp",
-    href: "https://wa.me/c/2349069932400?text=Hello%20Graced%20Homes%20%26%20Services.%20I'd%20like%20to%20book%20a%20cleaning%20service.",
+    href: "https://wa.me/2349069932400?text=Hello%20Graced%20Homes%20%26%20Services.%20I'd%20like%20to%20book%20a%20cleaning%20service.",
     icon: FaWhatsapp,
   },
 ];
@@ -113,8 +113,8 @@ export default function FooterSocials() {
             >
               <Icon
                 className="
-                  h-4
-                  w-4
+                  h-5
+                  w-5
                   text-foreground/70
                   transition-colors
                   duration-300
@@ -154,7 +154,7 @@ export default function FooterSocials() {
         </p>
 
         <motion.a
-          href="https://wa.me/c/2349069932400?text=Hello%20Graced%20Homes%20%26%20Services.%20I'd%20like%20to%20book%20a%20cleaning%20service."
+          href="https://wa.me/2349069932400?text=Hello%20Graced%20Homes%20%26%20Services.%20I'd%20like%20to%20book%20a%20cleaning%20service."
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{

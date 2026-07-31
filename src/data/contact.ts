@@ -10,7 +10,7 @@ export const contact = {
 
   whatsapp:
 
-    "https://wa.me/c/2349069932400?text=Hello%20Graced%20Homes%20%26%20Services.%20I'd%20like%20to%20book%20a%20cleaning%20service.",
+    "https://wa.me/2349069932400?text=Hello%20Graced%20Homes%20%26%20Services.%20I'd%20like%20to%20book%20a%20cleaning%20service.",
 
   whatsappLabel:
     "Chat with us instantly",
