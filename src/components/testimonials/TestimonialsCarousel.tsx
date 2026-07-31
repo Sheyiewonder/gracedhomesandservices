@@ -114,7 +114,6 @@ const AUTO_PLAY_DELAY = 5000;
 
 export default function TestimonialCarousel() {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
   const [direction, setDirection] = useState(1);
 
   const next = () => {
@@ -128,16 +127,6 @@ export default function TestimonialCarousel() {
       (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
   };
-
-  useEffect(() => {
-        if (paused) return;
-
-        const timer = setTimeout(() => {
-            next();
-        }, AUTO_PLAY_DELAY);
-
-        return () => clearTimeout(timer);
-    }, [index, paused]);
 
     useEffect(() => {
 
@@ -181,16 +170,14 @@ export default function TestimonialCarousel() {
 
 return (
   <div
-    className="relative mx-auto mt-16 max-w-4xl select-none"
-    onMouseEnter={() => setPaused(true)}
-    onMouseLeave={() => setPaused(false)}
-  >
+    className="relative mx-auto max-w-4xl select-none"
+    >
 
     <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-20 bg-gradient-to-r from-background to-transparent" />
 
     <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-20 bg-gradient-to-l from-background to-transparent" />
 
-        <div className="relative mx-auto h-[570px] w-full max-w-2xl overflow-visible rounded-[2rem]">
+        <div className="relative h-full w-full overflow-visible">
             <AnimatePresence
                 mode="wait"
                 custom={direction}
@@ -206,7 +193,6 @@ return (
                     drag="x"
                     dragConstraints={{ left: 0, right: 0 }}
                     dragElastic={0.2}
-                    onDragStart={() => setPaused(true)}
                     onDragEnd={(_, info) => {
 
                         const swipe = info.offset.x;
@@ -217,7 +203,6 @@ return (
                             previous();
                         }
 
-                        setPaused(false);
                     }}
                     transition={{
                         duration: 0.55,

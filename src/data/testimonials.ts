@@ -7,7 +7,7 @@ export const testimonials = [
     image: "/images/testimonials/sarah.jpg",
     rating: 5,
     review:
-      "GRACED transformed our office beyond expectations. Professional, punctual and incredibly thorough. We'll definitely be using them again.",
+      "GRACED HOMES & SERVICES transformed our office beyond expectations. Professional, punctual and incredibly thorough. We'll definitely be using them again.",
   },
   {
     name: "David Williams",

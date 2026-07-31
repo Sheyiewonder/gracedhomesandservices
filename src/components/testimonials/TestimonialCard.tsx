@@ -36,9 +36,8 @@ export default function TestimonialCard({
       className="
         group
         relative
+        h-ful
         w-full
-        max-w-2xl
-        mx-auto
         snap-start
         shrink-0
         overflow-hidden
@@ -46,7 +45,6 @@ export default function TestimonialCard({
         border
         border-border
         bg-card/80
-        p-8
         shadow-lg
         backdrop-blur-xl
         transition-all
@@ -70,60 +68,93 @@ export default function TestimonialCard({
         "
       />
 
-      {/* Stars */}
+        <div
+            className="
+                mx-auto
+                flex
+                h-full
+                max-w-[820px]
+                flex-col
+                justify-center
+                px-10
+                py-8
+            "
+        >
+            {/* Stars */}
 
-      <div className="mb-6 flex items-center gap-1">
-        {Array.from({ length: rating }).map((_, index) => (
-          <Star
-            key={index}
-            className="h-4 w-4 fill-secondary text-secondary"
-          />
-        ))}
-      </div>
-
+            <div className="mb-6 flex items-center gap-1">
+                {Array.from({ length: rating }).map((_, index) => (
+                <Star
+                    key={index}
+                    className="h-4 w-4 fill-secondary text-secondary"
+                />
+                ))}
+            </div>
       {/* Review */}
 
       <p
         className="
-          mb-8
-          text-lg
-          leading-9
-          text-foreground/80
+            mb-8
+            flex-1
+            text-justify
+            text-[1.05rem]
+            leading-8
+            text-foreground/80
         "
       >
         {review}
       </p>
 
-      {/* User */}
+        {/* User */}
 
-      <div className="mt-8 flex items-center gap-4">
-        <div
-          className="
-            relative
-            h-16
-            w-16
-            overflow-hidden
-            rounded-full
-            ring-2
-            ring-primary/20
-          "
-        >
-          <Image
-            src={image}
-            alt={name}
-            fill
-            sizes="56px"
-            className="
-              object-cover
-              transition-transform
-              duration-500
-              group-hover:scale-110
-            "
-          />
+        <div className="mt-8 flex justify-center">
+            <div className="flex items-center gap-4">
+                <div
+                    className="
+                        relative
+                        h-16
+                        w-16
+                        overflow-hidden
+                        rounded-full
+                        ring-2
+                        ring-primary/20
+                    "
+                >
+                    <Image
+                        src={image}
+                        alt={name}
+                        fill
+                        sizes="56px"
+                        className="
+                            object-cover
+                            transition-transform
+                            duration-500
+                            group-hover:scale-110
+                        "
+                    />
+                </div>
+
+                <div>
+                    <h4 className="font-semibold">
+                        {name}
+                    </h4>
+
+                    <p
+                        className="
+                            text-sm
+                            text-foreground/60
+                        "
+                    >
+                        {role}
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div>
-            <div className="mt-8 flex justify-center gap-3">
+        {/* Pagination */}
+
+        <div className="mt-8 flex justify-center">
+            <div className="flex items-center gap-3">
                 {Array.from({ length: total }).map((_, i) => (
                     <button
                         key={i}
@@ -143,20 +174,9 @@ export default function TestimonialCard({
                     />
                 ))}
             </div>
-          <h4 className="font-semibold">
-            {name}
-          </h4>
-
-          <p
-            className="
-              text-sm
-              text-foreground/60
-            "
-          >
-            {role}
-          </p>
         </div>
-      </div>
+        </div>
+
     </motion.article>
   );
 }

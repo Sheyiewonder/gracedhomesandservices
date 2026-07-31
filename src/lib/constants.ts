@@ -3,7 +3,7 @@ export const COMPANY = {
 
   slogan: "Your Space, Our Signature Shine",
 
-  whatsapp: "https://wa.me/c/2349069932400",
+  whatsapp: "https://wa.me/c/2349069932400?text=Hello%20Graced%20Homes%20%26%20Services.%20I'd%20like%20to%20book%20a%20cleaning%20service.",
 
   phone: "+2349069932400",
 
